@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
-import Meals from "./components/Meals/Meals.jsx";
-import Header from "./components/Layout/header.jsx";
+import React from 'react'
+import Meals from './components/Meals/Meals.jsx'
+import Header from './components/Layout/header.jsx'
+import {CartContextProvider} from './components/store/CartContext.jsx'
 
 function App() {
-  return (
-    <Fragment>
-<Header/>
-<Meals/>
-</Fragment>
-  );
+	return (
+		<CartContextProvider>
+			<Header />
+			<Meals />
+		</CartContextProvider>
+	)
 }
 
-export default App;
+export default App

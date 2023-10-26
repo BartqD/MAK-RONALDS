@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Fragment } from 'react'
 import classes from './Header.module.css'
 import logoImage from '../../assets/logo.png'
+import Button from '../UI/Button'
+import CartContext from '../store/CartContext'
 
 const Header = () => {
+	const cartCtx = useContext(CartContext)
+	const quantity = cartCtx.items.reduce((totalNumberOfItems, item) => {
+		return totalNumberOfItems + item.quantity
+	}, 0)
 	return (
 		<Fragment>
 			<header id={classes['main-header']}>
 				<div id={classes['title']}>
-					<img
-						src={logoImage}
-						alt='Flattened hamburger'
-					/>
-					<h1>MAK RONALDS</h1>
+					<img src={logoImage} alt='Flattened hamburger' />
+					<h1>MAK RONALD'S</h1>
 				</div>
 				<nav>
-					<button>Cart (0)</button>
+					<Button textOnly>Cart ({quantity})</Button>
 				</nav>
 			</header>
 		</Fragment>
