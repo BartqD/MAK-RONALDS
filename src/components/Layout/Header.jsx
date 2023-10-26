@@ -8,7 +8,10 @@ const Header = () => {
 		<Fragment>
 			<header id={classes['main-header']}>
 				<div id={classes['title']}>
-					<img src={logoImage} alt='Flatted hamburger'/>
+					<img
+						src={logoImage}
+						alt='Flattened hamburger'
+					/>
 					<h1>MAK RONALDS</h1>
 				</div>
 				<nav>

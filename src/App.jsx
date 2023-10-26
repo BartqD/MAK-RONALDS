@@ -1,9 +1,13 @@
-import React from "react";
-import Header from "./components/Layout/Header";
+import React, { Fragment } from "react";
+import Meals from "./components/Meals/Meals.jsx";
+import Header from "./components/Layout/header.jsx";
 
 function App() {
   return (
-<Header></Header>
+    <Fragment>
+<Header/>
+<Meals/>
+</Fragment>
   );
 }
 
