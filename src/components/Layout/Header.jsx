@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Fragment } from 'react'
 import classes from './Header.module.css'
-import logoImage from '../../assets/logo.png'
+import logoImage from '../../assets/logo.jpg'
 import Button from '../UI/Button'
 import CartContext from '../store/CartContext'
 
@@ -14,7 +14,7 @@ const Header = () => {
 		<Fragment>
 			<header id={classes['main-header']}>
 				<div id={classes['title']}>
-					<img src={logoImage} alt='Flattened hamburger' />
+					<img src={logoImage} alt='Flattened hamburger. Obraz autorstwa brgfx na Freepik' />
 					<h1>MAK RONALD'S</h1>
 				</div>
 				<nav>
