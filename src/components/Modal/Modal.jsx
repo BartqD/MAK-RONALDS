@@ -9,17 +9,16 @@ const overlays = document.getElementById('overlays')
 const Modal = ({children, open, className=''}) => {
 const dialogRef = useRef(open)
 
-
-
 useEffect(() => {
+	const modal = dialogRef.current
 	if (open) {
-		dialogRef.current.showModal()
-	}
-
+		modal.showModal()
+	} 
+	return () =>  modal.close() ;
   },[open])
 
 	return (
-		createPortal(<dialog ref={dialogRef} className={`${classes.modal} ${className} `} >{children}</dialog>, documentGetElementById('modal'))
+		createPortal(<dialog ref={dialogRef} className={`${classes.modal} ${className} `} >{children}</dialog>, document.getElementById('modal'))
 	)
 }
 

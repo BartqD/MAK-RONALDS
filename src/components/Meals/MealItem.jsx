@@ -2,15 +2,11 @@ import React, { useContext } from 'react'
 import classes from './MealItem.module.css'
 import Button from '../UI/Button'
 import CartContext from '../store/CartContext'
+import currencyFormatter from '../Utilities/currencyFormatter'
 
 const MealItem = ({meal}) => {
 	const cartCtx=useContext(CartContext)
-	const formatter = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2,
-	})
+	
 	function handleAddMealToCart  () {
 		cartCtx.addItem(meal)
 	}
@@ -21,7 +17,7 @@ const MealItem = ({meal}) => {
 				<img src={`http://localhost:3000/${meal.image}`} alt={meal.name} />
 				<div>
 					<h3>{meal.name}</h3>
-					<p className={classes['meal-item-price']}>{formatter.format(meal.price)}</p>
+					<p className={classes['meal-item-price']}>{currencyFormatter.format(meal.price)}</p>
 					<p className={classes['meal-item-description']}>{meal.description}</p>
 				</div>
 				<p className={classes['meal-item-actions']}>
