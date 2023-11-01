@@ -1,12 +1,8 @@
 import { useEffect, useRef } from 'react'
 import classes from './Modal.module.css'
 import { createPortal } from 'react-dom'
-import ReactDOM from 'react-dom'
 
-
-const overlays = document.getElementById('overlays')
-
-const Modal = ({children, open, className=''}) => {
+const Modal = ({children, open, className='', onClose}) => {
 const dialogRef = useRef(open)
 
 useEffect(() => {
@@ -18,7 +14,7 @@ useEffect(() => {
   },[open])
 
 	return (
-		createPortal(<dialog ref={dialogRef} className={`${classes.modal} ${className} `} >{children}</dialog>, document.getElementById('modal'))
+		createPortal(<dialog ref={dialogRef} className={`${classes.modal} ${className} `} onClose={onClose} >{children}</dialog>, document.getElementById('modal'))
 	)
 }
 
