@@ -1,1 +1,78 @@
-[]
+[
+	{
+		"items": [
+			{
+				"id": "m3",
+				"name": "Caesar Salad",
+				"price": "7.99",
+				"description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+				"image": "images/caesar-salad.jpg",
+				"quantity": 2
+			},
+			{
+				"id": "m4",
+				"name": "Spaghetti Carbonara",
+				"price": "10.99",
+				"description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+				"image": "images/spaghetti-carbonara.jpg",
+				"quantity": 1
+			},
+			{
+				"id": "m5",
+				"name": "Veggie Burger",
+				"price": "9.99",
+				"description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+				"image": "images/veggie-burger.jpg",
+				"quantity": 1
+			}
+		],
+		"customer": {
+			"name": "Bartosz Drozdek",
+			"email": "bdrozdek@gmail.com",
+			"street": "PISARZOWICE",
+			"postal-code": "59-800",
+			"city": "PISARZOWICE"
+		},
+		"id": "568.2503195319637"
+	},
+	{
+		"items": [
+			{
+				"id": "m1",
+				"name": "Mac & Cheese",
+				"price": "8.99",
+				"description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+				"image": "images/mac-and-cheese.jpg",
+				"quantity": 2
+			}
+		],
+		"customer": {
+			"name": "Bartosz Drozdek",
+			"email": "bdrozdek@gmail.com",
+			"street": "PISARZOWICE",
+			"postal-code": "59-800",
+			"city": "PISARZOWICE"
+		},
+		"id": "549.7999590781495"
+	},
+	{
+		"items": [
+			{
+				"id": "m1",
+				"name": "Mac & Cheese",
+				"price": "8.99",
+				"description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+				"image": "images/mac-and-cheese.jpg",
+				"quantity": 2
+			}
+		],
+		"customer": {
+			"name": "Bartosz Drozdek",
+			"email": "bdrozdek@gmail.com",
+			"street": "PISARZOWICE",
+			"postal-code": "59-800",
+			"city": "PISARZOWICE"
+		},
+		"id": "752.8524238105912"
+	}
+]

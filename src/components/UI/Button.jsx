@@ -5,7 +5,7 @@ const Button = ({children, textOnly, className, ...props}) => {
     const cssClasses = textOnly ? `${classes['text-button']} ${className}`: `${classes.button}`
 	return (
 		<button
-			type={props.type || 'button'}
+			type={props.type}
 			className={cssClasses}
 			onClick={props.onClick}
 			disabled={props.disabled}>
