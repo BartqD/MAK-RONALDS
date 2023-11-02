@@ -1,6 +1,7 @@
 import useHttp from '../../hooks/useHttp.js'
 import classes from './Meals.module.css'
 import MealItem from './MealItem'
+import Error from '../UI/Error.jsx'
 
 
 const requestConfig = {}
@@ -10,6 +11,9 @@ const Meals = () => {
 
 	if (isLoading) {
 		return <p className={classes.center}>Fetching meals ... </p>
+	}
+	if (error) {
+		return <Error title='Failed to fetch meals' message={error} />
 	}
 
 	return (

@@ -1,3 +1,5 @@
+import classes from './Error.module.css'
+
 const Error = ({ title, message }) => {
 	return (
 		<div className={classes.error}>
